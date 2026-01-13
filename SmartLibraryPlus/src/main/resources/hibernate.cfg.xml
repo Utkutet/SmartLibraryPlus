@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Settings -->
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="connection.url">jdbc:sqlite:library.db</property>
+        
+        <!-- JDBC Connection Pool (using built-in) -->
+        <!-- <property name="connection.pool_size">1</property> -->
+
+        <!-- SQL Dialect -->
+        <property name="dialect">org.hibernate.community.dialect.SQLiteDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- Mapping Entities -->
+        <mapping class="entity.Book"/>
+        <mapping class="entity.Student"/>
+        <mapping class="entity.Loan"/>
+    </session-factory>
+</hibernate-configuration>

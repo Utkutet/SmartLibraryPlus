@@ -1,0 +1,11 @@
+target/
+*.class
+
+*.db
+*.sqlite
+library.db
+
+.idea/
+.vscode/
+*.iml
+.DS_Store
